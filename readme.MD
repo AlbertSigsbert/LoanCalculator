@@ -6,12 +6,12 @@ This is a loan calculator web application built with Vanilla JS and TailwindCSS.
 
             This is a desktop View.
 
-<img src="dist/img/task-lists-desktop.png">
+<img src="dist/img/loan-calc-desktop.png">
 
-             This is for mobile view taken on a iPhone 8.
+             This is for mobile view.
 
 <p align="center">
-   <img src="dist/img/task-lists-(iPhone 6_7_8).png" height="500px">
+   <img src="dist/img/loan-calc-mobile.png" height="500px">
   </p>
 ### Links
 
