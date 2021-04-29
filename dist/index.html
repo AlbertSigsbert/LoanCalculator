@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="tailwind.css">
+    
+</head>
+<body class="bg-gray-300">
+    <div class="lg:max-w-2xl mx-auto">
+        <div class="mt-12 sm:mt-6 p-6  sm:p-12 max-w-xs sm:max-w-lg lg:max-w-2xl  mx-auto text-center bg-gray-100 rounded-lg shadow-xl" id="card">
+            <h1 class="heading" id="heading">Loan Calculator</h1>
+            <form class="mt-4 space-y-6">
+               <div class="relative flex">
+                <input id="loan-amount" class="input input-field" placeholder="Loan Amount">
+                    <span class="span span-primary">
+                        <img src="img/coin.png" alt="" class="h-6">
+                    </span>
+               </div>
+               <div class="relative flex">
+                <input id="annual-interest" class="input input-field" placeholder="Annual Interest">
+                    <span class="span span-primary">
+                        <img src="img/percentage.png" alt="" class="h-6">
+                    </span>
+               </div>
+               <div class="relative">
+                <input id="repayment-years" class="input input-secondary" placeholder="Repayment Years">
+               </div>
+        
+            <button id="calculate" class="w-full py-2 bg-gray-700 hover:bg-gray-400  text-white rounded-md" type="submit">Calculate</button>
+           </form>
+
+           <!-- LOADERS -->
+           <div>
+               <img src="img/loader2.gif" alt="loader" class="my-6 ">
+           </div>
+           
+           <div class="space-y-6">
+            <h1 class="heading mt-6">Results</h1>
+                <div class="relative">
+                    <span class="span span-secondary">Monthly Payments</span>
+                    <input id="monthly-payments" class="input input-primary" disabled>
+                </div>
+                <div class="relative">
+                    <span class="span span-secondary">Total Payment</span>
+                    <input id="total-payment" class="input input-primary" disabled>
+                </div>
+                <div class="relative">
+                    <span class="span span-secondary">Total Interest</span>
+                    <input id="total-interest" class="input input-primary" disabled>
+                </div>
+           </div>    
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
