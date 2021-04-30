@@ -7,10 +7,19 @@ const totalPaymentInput = document.getElementById('total-payment');
 const totalInterestInput = document.getElementById('total-interest');
 
 //Listening form submission
-document.querySelector('form').addEventListener('submit',calculateResults);
+document.querySelector('form').addEventListener('submit', function(e){
+    //Show loader
+    document.getElementById('loader').style.display = 'block';
+     //Hide result
+    document.getElementById('results').style.display = 'none';
+
+    setTimeout(calculateResults , 5000);
+
+    e.preventDefault();
+});
 
 //Defn calculateResult fn
-function calculateResults(e){
+function calculateResults(){
 
     const principal = parseFloat(loanAmount.value);
     const calculatedInterest = parseFloat(annualInterest.value)/ 100 / 12;
@@ -27,17 +36,26 @@ function calculateResults(e){
         monthlyPaymentInput.value = monthlyPayment.toFixed(2);
         totalPaymentInput.value = totalPayment.toFixed(2);
         totalInterestInput.value = totalInterest.toFixed(2);
+
+    //Hide loader
+    document.getElementById('loader').style.display = 'none';
+    //Show result
+   document.getElementById('results').style.display = 'block';
     }
     else{
         showError('Please check your numbers');  
     }
-   e.preventDefault();
+  
 }
 
 //Show Error Fn
 function showError(error)
 {
-    
+    //Show loader
+    document.getElementById('loader').style.display = 'none';
+    //Hide result
+   document.getElementById('results').style.display = 'none';
+
     const errorDiv = document.createElement('div');
     errorDiv.className = 'alert input input-primary bg-red-200 mb-4';
 
