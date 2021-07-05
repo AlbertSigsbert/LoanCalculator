@@ -19,7 +19,8 @@ This is a loan calculator web application built with Vanilla JS and TailwindCSS.
   </p>
 ### Links
 
-- Live Site URL: https://loancalculators.netlify.app/
+- [Live Site URL](https://loancalculators.netlify.app/)
+- [Youtube](https://youtu.be/uTIJx4UWTrk)
 
 ### Built with
 
